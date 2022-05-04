@@ -99,7 +99,7 @@ void flood(int pos_row, int pos_col, int distance) {
     // Recursive call on the cell to the top. Check the current column
     // to see if we are on the top edge or if there is a wall to the top.
     // If there is, do nothing, if there isn't, call flood
-    if (pos_row == 0 || !(walls[pos_row - 1][pos_col] & 0b0100))
+    if (pos_row == 0 || !(walls[pos_row - 1][pos_col] & 0b0010))
         flood(pos_row - 1, pos_col, distance + 1); 
     
     return;
